@@ -2,14 +2,15 @@ pipeline {
     agent any
 
     environment {
-        DOCKER_IMAGE = "hruthviks68/app-image"
+        DOCKER_IMAGE = "hruthviks68/token"
     }
 
     stages {
 
         stage('Clone Repository') {
             steps {
-                git 'https://github.com/Hru20806/token.git
+                git branch: 'main',
+                    url: 'https://github.com/Hru20806/token.git
 '
             }
         }
